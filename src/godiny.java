@@ -97,7 +97,6 @@ public class godiny extends Application {
         secondHand.setEndX(CLOCK_CENTER_X + (CLOCK_RADIUS * 0.9) * Math.cos(secondAngle));
         secondHand.setEndY(CLOCK_CENTER_Y + (CLOCK_RADIUS * 0.9) * Math.sin(secondAngle));
     }
-
     public static void main(String[] args) {
         launch(args);
     }
