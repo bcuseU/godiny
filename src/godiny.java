@@ -68,9 +68,9 @@ public class godiny extends Application {
     }
 
     private void drawHands() { // Добавляет секундную, минутную и часовую стрелки
-        hourHand = new Line(CLOCK_CENTER_X, CLOCK_CENTER_Y, CLOCK_CENTER_X, CLOCK_CENTER_Y - CLOCK_RADIUS / 2);
-        minuteHand = new Line(CLOCK_CENTER_X, CLOCK_CENTER_Y, CLOCK_CENTER_X, CLOCK_CENTER_Y - CLOCK_RADIUS * 0.7);
-        secondHand = new Line(CLOCK_CENTER_X, CLOCK_CENTER_Y, CLOCK_CENTER_X, CLOCK_CENTER_Y - CLOCK_RADIUS * 0.9);
+        hourHand = new Line(CLOCK_CENTER_X, CLOCK_CENTER_Y, CLOCK_CENTER_X, CLOCK_CENTER_Y - CLOCK_RADIUS / 2); // Определяет местоположение часовой стрелки по x и y
+        minuteHand = new Line(CLOCK_CENTER_X, CLOCK_CENTER_Y, CLOCK_CENTER_X, CLOCK_CENTER_Y - CLOCK_RADIUS * 0.7); // Определяет местоположение минутной стрелки по x и y
+        secondHand = new Line(CLOCK_CENTER_X, CLOCK_CENTER_Y, CLOCK_CENTER_X, CLOCK_CENTER_Y - CLOCK_RADIUS * 0.9); // Определяет местоположение секундной стрелки по x и y
 
         hourHand.setStroke(Color.BLACK); // Ставит цвет часовой стрелки
         minuteHand.setStroke(Color.BLACK); // Ставит цвет минутной стрели
