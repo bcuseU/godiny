@@ -27,7 +27,7 @@ public class godiny extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        root = new Pane();
+        root = new Pane();  //
         Scene scene = new Scene(root, WIDTH, HEIGHT);
         primaryStage.setScene(scene); // Устанавливает сцену для окна
         primaryStage.setTitle("Часы"); // Заголовок
