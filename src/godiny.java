@@ -101,4 +101,4 @@ public class godiny extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-}
+} s
