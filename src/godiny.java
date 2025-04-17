@@ -10,20 +10,22 @@ import javafx.stage.Stage; // Класс Stage c методами setTitle, setS
 import java.time.LocalTime; // Класс LocalTime представляет собой методы, которые работают с временем (с часами, минутами, секундами и даже нано секундами)
 import java.util.Timer; // Класс Timer планирует выполенние задач
 import java.util.TimerTask; // Абстрактный класс, который явялется вспомогательным для класса Timer с базовыми методами
+import javafx.scene.shape.Rectangle;
 
 public class godiny extends Application {
 
     private static final double WIDTH = 600; // Определяет размер выводящегося окна по горизонтали
-    private static final double  HEIGHT = 600; // Определяет размер выводящегося окна по вертикали
+    private static final double HEIGHT = 600; // Определяет размер выводящегося окна по вертикали
     private static final double CLOCK_RADIUS = 170; // Определяет радиус часов в выводящемся окне
     private static final double CLOCK_CENTER_X = WIDTH / 2; // Определяет положение часов выводящемся окне по горизонтали
     private static final double CLOCK_CENTER_Y = HEIGHT / 2.2; // Определяет положение часов выводящемся окне по вертикали
 
-    private Pane root;
+    private static Pane root;
     private Line hourHand; // Часовая стрелка
     private Line minuteHand; // Минутная стрелка
     private Line secondHand; // Секундная стрелка
-
+    private Rectangle background;
+    private static Text dateText;
 
     @Override
     public void start(Stage primaryStage) {
@@ -97,8 +99,14 @@ public class godiny extends Application {
         secondHand.setEndX(CLOCK_CENTER_X + (CLOCK_RADIUS * 0.9) * Math.cos(secondAngle));
         secondHand.setEndY(CLOCK_CENTER_Y + (CLOCK_RADIUS * 0.9) * Math.sin(secondAngle));
     }
+    private void drawBackground() {
+        // Создаем квадратный фон
+        background = new Rectangle( 0, 0, WIDTH, HEIGHT);
+        background.setFill(Color.LIGHTGRAY); // Цвет фона
+        root.getChildren().add(background); // Добавляем фон на сцену
+    }
 
     public static void main(String[] args) {
         launch(args);
     }
-} s
+}
